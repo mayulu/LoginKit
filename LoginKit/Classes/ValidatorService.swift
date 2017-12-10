@@ -11,7 +11,7 @@ import Validator
 
 enum ValidationError: String, Error {
 
-    case invalidName = "Invalid name"
+    case invalidName = "Must bewteen 5 ~ 20 charactors"
     case invalidEmail = "Invalid email address"
     case passwordLength = "Must be at least 8 characters"
     case passwordNotEqual = "Password does not match"
@@ -21,7 +21,7 @@ enum ValidationError: String, Error {
     }
     
 }
-
+/*
 public struct FullNameRule: ValidationRule {
 
     public typealias InputType = String
@@ -55,7 +55,7 @@ public struct FullNameRule: ValidationRule {
     }
 
 }
-
+*/
 struct ValidationService {
 
     static var emailRules: ValidationRuleSet<String> {
@@ -72,7 +72,8 @@ struct ValidationService {
 
     static var nameRules: ValidationRuleSet<String> {
         var nameRules = ValidationRuleSet<String>()
-        nameRules.add(rule: FullNameRule(error: ValidationError.invalidName))
+        //nameRules.add(rule: FullNameRule(error: ValidationError.invalidName))
+      nameRules.add(rule: ValidationRuleLength(min: 5, max: 20, error: ValidationError.invalidName))
         return nameRules
     }
 

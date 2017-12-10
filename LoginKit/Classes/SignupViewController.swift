@@ -243,5 +243,17 @@ extension SignupViewController : UITextFieldDelegate {
         
         return false
     }
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    if textField.tag == 1 {
+      let charSet = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz1234567890_.-").inverted
+      let filtered = string.components(separatedBy: charSet)
+      let ss = filtered.joined(separator: "")
+      return ss == string
+    }
+    return true
+  }
+  
+  
     
 }
