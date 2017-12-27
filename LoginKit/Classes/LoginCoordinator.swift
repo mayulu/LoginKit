@@ -193,7 +193,7 @@ open class LoginCoordinator: ConfigurationSource {
 
 // MARK: - Navigation
 
-private extension LoginCoordinator {
+extension LoginCoordinator {
 
     func goToLogin() {
         navigationController.pushViewController(loginViewController, animated: true)
