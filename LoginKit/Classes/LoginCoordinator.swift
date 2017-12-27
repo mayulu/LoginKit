@@ -78,7 +78,7 @@ open class LoginCoordinator: ConfigurationSource {
 
     // MARK: View Controller's
 
-    fileprivate var navigationController: UINavigationController {
+    open var navigationController: UINavigationController {
         if _navigationController == nil {
             _navigationController = UINavigationController(rootViewController: self.initialViewController)
         }
@@ -203,6 +203,11 @@ open class LoginCoordinator: ConfigurationSource {
 
     open func pop() {
         _ = navigationController.popViewController(animated: true)
+    }
+
+    open func goFromSignupToLogin() {
+        _ = navigationController.popViewController(animated: false)
+        navigationController.pushViewController(loginViewController, animated: true)
     }
 
 }
