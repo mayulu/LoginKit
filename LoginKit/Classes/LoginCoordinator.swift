@@ -189,29 +189,27 @@ open class LoginCoordinator: ConfigurationSource {
         print("Implement this method in your subclass to handle password recovery.")
     }
 
-}
-
-// MARK: - Navigation
-
-extension LoginCoordinator {
-
-    func goToLogin() {
+    open func goToLogin() {
         navigationController.pushViewController(loginViewController, animated: true)
     }
 
-    func goToSignup() {
+    open func goToSignup() {
         navigationController.pushViewController(signupViewController, animated: true)
     }
 
-    func goToPassword() {
+    open func goToPassword() {
         navigationController.pushViewController(passwordViewController, animated: true)
     }
 
-    func pop() {
+    open func pop() {
         _ = navigationController.popViewController(animated: true)
     }
 
 }
+
+// MARK: - Navigation
+
+
 
 // MARK: - View Controller Callbacks
 
