@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Validator
 
 enum ValidationError: String, Error {
@@ -19,7 +20,6 @@ enum ValidationError: String, Error {
     var message: String {
         return self.rawValue
     }
-    
 }
 /*
 public struct FullNameRule: ValidationRule {

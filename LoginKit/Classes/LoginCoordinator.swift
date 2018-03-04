@@ -56,7 +56,7 @@ open class LoginCoordinator: ConfigurationSource {
 
     public var loginButtonText = "Log In"
 
-    public var facebookButtonText = "Enter with Facebook"
+    public var facebookButtonText = "Enter with Others"
 
     public var forgotPasswordButtonText = "Forgot Password"
 
@@ -181,10 +181,6 @@ open class LoginCoordinator: ConfigurationSource {
         print("Implement this method in your subclass to handle signup.")
     }
 
-    open func enterWithFacebook(profile: FacebookProfile) {
-        print("Implement this method in your subclass to handle facebook.")
-    }
-
     open func recoverPassword(email: String) {
         print("Implement this method in your subclass to handle password recovery.")
     }
@@ -206,7 +202,7 @@ open class LoginCoordinator: ConfigurationSource {
     }
 
     open func goFromSignupToLogin() {
-        _ = navigationController.popViewController(animated: false)
+         _ = navigationController.popViewController(animated: false)
         navigationController.pushViewController(loginViewController, animated: true)
     }
 
@@ -226,17 +222,6 @@ extension LoginCoordinator: InitialViewControllerDelegate {
 
     func didSelectSignup(_ viewController: UIViewController) {
         goToSignup()
-    }
-
-    func didSelectFacebook(_ viewController: UIViewController) {
-        facebookService.login(from: viewController) { (result) in
-            switch result {
-            case .success(let profile):
-                self.enterWithFacebook(profile: profile)
-            default:
-                break
-            }
-        }
     }
 
 }
@@ -306,15 +291,13 @@ enum Font: String {
 }
 
 let loadFonts: () = {
-    print("Login Coordinator: Loading Fonts")
+
     let light = Font.montserratLight
     let regular = Font.montserratRegular
     let loadedLight = LoginCoordinator.loadFont(light.rawValue, type: light.type)
     let loadedRegular = LoginCoordinator.loadFont(regular.rawValue, type: regular.type)
     if loadedLight && loadedRegular {
-        print("Login Coordinator: Loaded Fonts")
     } else {
-        print("Login Coordinator: Failed Loading Fonts")
     }
 }()
 

@@ -14,7 +14,6 @@ protocol InitialViewControllerDelegate: class {
 
     func didSelectLogin(_ viewController: UIViewController)
 
-    func didSelectFacebook(_ viewController: UIViewController)
 
 }
 
@@ -44,7 +43,6 @@ class InitialViewController: UIViewController, BackgroundMovable {
 
     @IBOutlet weak var loginButton: Buttn!
 
-    @IBOutlet weak var facebookButton: UIButton!
 
     // MARK: - UIViewController
 
@@ -73,7 +71,6 @@ class InitialViewController: UIViewController, BackgroundMovable {
     func customizeAppearance() {
         configureFromSource()
         setupFonts()
-        addShadows()
 
         navigationController?.isNavigationBarHidden = true
         navigationController?.delegate = self
@@ -85,7 +82,7 @@ class InitialViewController: UIViewController, BackgroundMovable {
         }
 
         backgroundImageView.image = config.backgroundImage
-        logoImageView.image = config.mainLogoImage
+        //logoImageView.image = config.mainLogoImage
 
         signupButton.setTitle(config.signupButtonText, for: .normal)
         signupButton.setTitleColor(config.tintColor, for: .normal)
@@ -95,20 +92,11 @@ class InitialViewController: UIViewController, BackgroundMovable {
         loginButton.setTitleColor(config.tintColor, for: .normal)
         loginButton.borderColor = config.tintColor.withAlphaComponent(0.25)
         
-        facebookButton.setTitle(config.facebookButtonText, for: .normal)
     }
 
     func setupFonts() {
         loginButton.titleLabel?.font = Font.montserratRegular.get(size: 13)
         signupButton.titleLabel?.font = Font.montserratRegular.get(size: 13)
-        facebookButton.titleLabel?.font = Font.montserratRegular.get(size: 15)
-    }
-
-    func addShadows() {
-        facebookButton.layer.shadowOpacity = 0.3
-        facebookButton.layer.shadowColor = UIColor(red: 89.0/255.0, green: 117.0/255.0, blue: 177.0/255.0, alpha: 1).cgColor
-        facebookButton.layer.shadowOffset = CGSize(width: 15, height: 15)
-        facebookButton.layer.shadowRadius = 7
     }
 
     // MARK: - Action's
@@ -119,10 +107,6 @@ class InitialViewController: UIViewController, BackgroundMovable {
 
     @IBAction func didSelectLogin(_ sender: AnyObject) {
         delegate?.didSelectLogin(self)
-    }
-
-    @IBAction func didSelectFacebook(_ sender: AnyObject) {
-        delegate?.didSelectFacebook(self)
     }
 
 }
