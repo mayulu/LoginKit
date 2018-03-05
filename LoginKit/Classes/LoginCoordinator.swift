@@ -148,7 +148,7 @@ open class LoginCoordinator: ConfigurationSource {
 
     open func start() {
         if let rootViewController = rootViewController {
-            rootViewController.present(navigationController, animated: true, completion: nil)
+            rootViewController.present(navigationController, animated: false, completion: nil)
         } else if let window = window {
             window.rootViewController = navigationController
             window.makeKeyAndVisible()

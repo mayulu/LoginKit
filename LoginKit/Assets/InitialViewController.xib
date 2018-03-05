@@ -9,6 +9,12 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="ILLoginKit" customModuleProvider="target">
             <connections>
@@ -23,7 +29,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Vw0-kY-ntJ" customClass="GradientImageView" customModule="ILLoginKit" customModuleProvider="target">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rback" highlightedImage="rback" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw0-kY-ntJ" customClass="GradientImageView" customModule="ILLoginKit" customModuleProvider="target">
                     <rect key="frame" x="-20" y="-20" width="415" height="707"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="fadeAlpha">
@@ -34,42 +40,61 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-q7-7Ju" customClass="Buttn" customModule="ILLoginKit" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-q7-7Ju" customClass="Buttn" customModule="ILLoginKit" customModuleProvider="target">
                     <rect key="frame" x="40" y="487" width="150" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="fc3-ve-5r8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                    <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="SIGN UP">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderType">
-                            <integer key="value" value="2"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttnColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="didSelectSignup:" destination="-1" eventType="touchUpInside" id="qsl-r3-2xg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-wF-hG2" customClass="Buttn" customModule="ILLoginKit" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-wF-hG2" customClass="Buttn" customModule="ILLoginKit" customModuleProvider="target">
                     <rect key="frame" x="185" y="487" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="9F5-ZK-SHS"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                    <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="LOG IN">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderType">
-                            <integer key="value" value="2"/>
+                            <integer key="value" value="0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttnColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -80,21 +105,21 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="leading" secondItem="9Xa-q7-7Ju" secondAttribute="leading" constant="-40" id="3Gm-Ia-4ad"/>
-                <constraint firstAttribute="trailing" secondItem="Vw0-kY-ntJ" secondAttribute="trailing" constant="-20" id="G08-uT-z48"/>
+                <constraint firstAttribute="trailing" secondItem="Vw0-kY-ntJ" secondAttribute="trailing" constant="-20" id="G08-uT-z48" userLabel="trailing = Background Image View.trailing"/>
                 <constraint firstItem="9Xa-q7-7Ju" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="Mba-Om-itj"/>
-                <constraint firstAttribute="bottom" secondItem="Vw0-kY-ntJ" secondAttribute="bottom" constant="-20" id="PYR-Bs-drb"/>
-                <constraint firstItem="Vw0-kY-ntJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-20" id="XPO-54-lKF"/>
+                <constraint firstAttribute="bottom" secondItem="Vw0-kY-ntJ" secondAttribute="bottom" constant="-20" id="PYR-Bs-drb" userLabel="bottom = Background Image View.bottom"/>
+                <constraint firstItem="Vw0-kY-ntJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-20" id="XPO-54-lKF" userLabel="Background Image View.leading = leading"/>
                 <constraint firstAttribute="bottom" secondItem="9Xa-q7-7Ju" secondAttribute="bottom" constant="130" id="ZLL-6L-oTT" userLabel="Signup Button.bottom = bottom - 130"/>
                 <constraint firstItem="B7r-wF-hG2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" constant="-40" id="bkh-nJ-31Q" userLabel="Login Button.trailing = trailing - 40"/>
                 <constraint firstAttribute="bottom" secondItem="B7r-wF-hG2" secondAttribute="bottom" constant="130" id="dH5-Hs-8bs" userLabel="Login Button.bottom = bottom - 130"/>
                 <constraint firstAttribute="leading" secondItem="9Xa-q7-7Ju" secondAttribute="leading" constant="-40" id="enB-lh-Yf4" userLabel="Signup Button.leading = leading + 40"/>
                 <constraint firstItem="B7r-wF-hG2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="pmQ-Jq-bBx" userLabel="Login Button.width = 0.4 × width"/>
-                <constraint firstItem="Vw0-kY-ntJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="zj1-IP-NWo"/>
+                <constraint firstItem="Vw0-kY-ntJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="zj1-IP-NWo" userLabel="Background Image View.top = top"/>
             </constraints>
             <point key="canvasLocation" x="-7.5" y="-539.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Background" width="512" height="646"/>
+        <image name="rback" width="16" height="16"/>
     </resources>
 </document>
