@@ -132,7 +132,7 @@ open class LoginCoordinator: ConfigurationSource {
 
     // MARK: Services
 
-    public lazy var facebookService = FacebookService()
+    //public lazy var facebookService = FacebookService()
 
     // MARK: - LoginCoordinator
 

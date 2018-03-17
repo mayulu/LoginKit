@@ -23,6 +23,5 @@ All you need to do is start LoginKit, and then make the necessary calls to your 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Validator', '~> 2.1.1'
-  s.dependency 'FBSDKLoginKit', '4.26.0'
 
 end

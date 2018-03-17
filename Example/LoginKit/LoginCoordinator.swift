@@ -59,13 +59,13 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         // Handle signup via your API
         print("Signup with: name = \(name) email =\(email) password = \(password)")
     }
-
+/*
     override func enterWithFacebook(profile: FacebookProfile) {
         // Handle Facebook login/signup via your API
         print("Login/Signup via Facebook with: FB profile =\(profile)")
 
     }
-
+*/
     override func recoverPassword(email: String) {
         // Handle password recovery via your API
         print("Recover password with: email =\(email)")
