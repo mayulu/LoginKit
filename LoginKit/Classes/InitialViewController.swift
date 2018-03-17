@@ -92,7 +92,7 @@ class InitialViewController: UIViewController, BackgroundMovable {
         
 
         loginButton.setTitle(config.loginButtonText, for: .normal)
-        loginButton.setTitleColor(.purple, for: .normal)
+        loginButton.setTitleColor(.darkGray, for: .normal)
         loginButton.borderColor = config.tintColor.withAlphaComponent(0.25)
         
         
